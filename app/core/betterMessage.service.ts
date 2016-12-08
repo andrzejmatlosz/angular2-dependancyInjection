@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 
 @Injectable()
-export class MessageService {
+export class BetterMessageService {
     
     generateMessage(value: number) {
-        return '-' + value + '-';
+        return '<!' + value + '!>';
     }
 
 }

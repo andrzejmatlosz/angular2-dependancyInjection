@@ -33,6 +33,6 @@ import { MessageService } from './core/message.service';
         Component9Component,
     ],
     bootstrap: [ AppComponent ],
-    providers: [ MessageService ]
+    //providers: [ MessageService ]
 })
 export class AppModule { }

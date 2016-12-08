@@ -9,7 +9,8 @@ import { MessageService } from './../core/message.service';
             <component-1></component-1>
             <component-2></component-2>
         </div>`,
-    styleUrls: [ 'app/child.components.css' ]
+    styleUrls: [ 'app/child.components.css' ],
+    providers: [ MessageService ]
 })
 export class Component0Component implements DoCheck {
     

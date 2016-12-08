@@ -1,5 +1,6 @@
 import { Component, DoCheck } from '@angular/core';
 import { MessageService } from './../core/message.service';
+import { BetterMessageService } from './../core/betterMessage.service';
 
 @Component({
     selector: 'component-2',
@@ -7,10 +8,11 @@ import { MessageService } from './../core/message.service';
         <div class="child-component level-one component-2">
             2: {{message}}
             <component-5></component-5>
-            <component-6></component-6>
+            <component-6><component-10></component-10></component-6>
         </div>
         `,
-    styleUrls: [ 'app/child.components.css' ]
+    styleUrls: [ 'app/child.components.css' ],
+    // providers: [ BetterMessageService ]
 })
 export class Component2Component  implements DoCheck {
     

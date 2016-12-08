@@ -1,22 +1,24 @@
 import { Component, DoCheck } from '@angular/core';
 import { MessageService } from './../core/message.service';
+import { BetterMessageService } from './../core/betterMessage.service';
 
 @Component({
     selector: 'component-6',
     template: `
         <div class="child-component level-one component-6">
             6: {{message}}
-            <component-10></component-10>
+            <ng-content></ng-content>
         </div>
         `,
-    styleUrls: [ 'app/child.components.css' ]
+    styleUrls: [ 'app/child.components.css' ],
+    providers: [ BetterMessageService ] 
 })
 export class Component6Component  implements DoCheck {
     
     private counter: number = 0;
     private message: string;
 
-    constructor(private messageService:MessageService) {}
+    constructor(private messageService: BetterMessageService) {}
 
     ngDoCheck () {
         this.counter++;

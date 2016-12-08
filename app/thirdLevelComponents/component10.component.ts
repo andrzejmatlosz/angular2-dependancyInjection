@@ -1,5 +1,6 @@
-import { Component, DoCheck } from '@angular/core';
+import { Component, DoCheck, Optional, Host } from '@angular/core';
 import { MessageService } from './../core/message.service';
+import { BetterMessageService } from './../core/betterMessage.service';
 
 @Component({
     selector: 'component-10',
@@ -10,15 +11,22 @@ import { MessageService } from './../core/message.service';
         `,
     styleUrls: [ 'app/child.components.css' ]
 })
-export class Component10Component  implements DoCheck {
+export class Component10Component implements DoCheck {
     
     private counter: number = 0;
     private message: string;
 
-    constructor(private messageService:MessageService) {}
+    constructor(
+        private messageService: MessageService, 
+        @Optional() @Host() private betterMessageService: BetterMessageService
+    ) {}
 
     ngDoCheck () {
         this.counter++;
-        this.message = this.messageService.generateMessage(this.counter);
+        if (this.betterMessageService) {
+            this.message = this.betterMessageService.generateMessage(this.counter);
+        } else {
+            this.message = this.messageService.generateMessage(this.counter);
+        }
     }
 }
