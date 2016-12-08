@@ -1,0 +1,60 @@
+.child-component {
+    position: absolute;
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    background: lightgrey;
+    border: solid 3px darkgray;
+    border-radius: 5px;
+    width: 100px;
+    height: 50px;
+    padding-top: 15px;
+}
+
+.child-component.checked {
+    background: green;
+}
+
+.level-zero {
+    top: 150px;
+}
+
+.level-one, .level-two, .level-three {
+    top: 100px;
+}
+
+.component-0 {
+    left: 400px;
+}
+
+.component-1 {
+    left: -100px;
+}
+
+.component-2 {
+    left: 100px;
+}
+
+.component-3 {
+    left: -200px;
+}
+
+.component-4 {
+    left: -50px;
+}
+
+.component-5 {
+    left: 50px;
+}
+
+.component-6 {
+    left: 200px;
+}
+
+/*.component-5, .component-9 {
+    left: 550px;
+}
+
+.component-6, .component-10 {
+    left: 700px;
+}*/
